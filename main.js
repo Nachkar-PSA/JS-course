@@ -11,7 +11,7 @@ radioButtons.forEach(function (radio) {
   });
 });
 
-//Підтвердження видалення через checkbox
+//Підтвердження вибору через checkbox
 const form = document.querySelector("form");
 const name = document.querySelector("#name");
 const checkbox = document.querySelector("#checkbox");
@@ -29,7 +29,7 @@ checkbox.addEventListener("change", function () {
 });
 
 //Перевірка правильності введення імені та email
-//const form = document.querySelector("form");
+const form = document.querySelector("form");
 
 form.addEventListener("submit", function (event) {
   event.preventDefault(); // Запобігає відправці форми
