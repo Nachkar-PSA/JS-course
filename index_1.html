@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOM Task</title>
+</head>
+
+<body>
+    <p id="myParagraph">Початковий текст</p>
+    <button onclick="changeText('myParagraph', 'Новий текст')">Змінити текст</button>
+    <div id="myBox" style="width: 100px; height: 100px; background-color: grey;"></div>
+    <button onclick="changeBackgroundColor('myBox', 'blue')">Змінити колір</button>
+    <button id="myButton">Натисни мене</button>
+
+
+
+    <script>
+        // Створіть функцію changeText для зміни тексту елемента
+        function changeText(id, newText) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.textContent = newText;
+            } else {
+                console.error('Елемент не знайдено!');
+            }
+        }
+
+        // Створіть функцію changeBackgroundColor для зміни кольору фону елемента
+        function changeBackgroundColor(id, newColor) {
+            const element = document.getElementById(id);
+            if (element) {
+                element.style.backgroundColor = newColor;
+            } else {
+                console.error('Елемент не знайдено!');
+            }
+        }
+
+        // Створіть функцію handleClick для обробки кліку по кнопці
+        const button = document.getElementById('myButton');
+        function handleClick() {
+            console.log('Кнопку натиснуто!');
+        }
+        button.addEventListener('click', handleClick);
+
+        //module.exports = changeText; // не видаляти цей код
+    </script>
+</body>
+
+</html>
